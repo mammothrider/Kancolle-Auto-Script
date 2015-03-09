@@ -72,6 +72,9 @@ class expedition(wx.Panel):
 
 if __name__ == '__main__':
 	app = wx.App(False)
-	frame = wx.Frame(None, -1, title="Kancolle Scription", style= wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.MINIMIZE_BOX)
+	frame = wx.Frame(None, -1, 
+					title="Kancolle Scription", 
+					style= wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.MINIMIZE_BOX)
+	ex = expedition(frame)
 	frame.Show()
 	app.MainLoop()
