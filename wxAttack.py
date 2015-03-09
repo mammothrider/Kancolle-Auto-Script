@@ -70,14 +70,8 @@ class expedition(wx.Panel):
     def EvtCheckBox(self, event):
         self.logger.AppendText('EvtCheckBox: %d\n' % event.Checked())
 
-
-app = wx.App(False)
-frame = wx.Frame(None, title="Demo with Notebook")
-nb = wx.Notebook(frame)
-
-
-nb.AddPage(ExamplePanel(nb), "Absolute Positioning")
-nb.AddPage(ExamplePanel(nb), "Page Two")
-nb.AddPage(ExamplePanel(nb), "Page Three")
-frame.Show()
-app.MainLoop()
+if __name__ == '__main__':
+	app = wx.App(False)
+	frame = wx.Frame(None, -1, title="Kancolle Scription", style= wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.MINIMIZE_BOX)
+	frame.Show()
+	app.MainLoop()
